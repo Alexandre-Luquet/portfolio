@@ -12,7 +12,7 @@ ul,ol{
     list-style: none;
 }
 
-a{
+a,.cv{
     text-decoration: none;
 }
 
@@ -73,12 +73,11 @@ ul > i{
     top: 0;
     left: -25rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
     transition: all 650ms;
     z-index: 200;
-}
-
-.main-nav ul{
-    margin: auto;
 }
 
 .nav-item{
@@ -109,7 +108,9 @@ ul > i{
 }
 
 .primaryhead{
-    padding-top: 14rem;
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
 }
 
 .heading-primary-main {
@@ -223,22 +224,24 @@ ul > i{
 }
 
 .cv{
+    text-align: center;
+    padding-top: 0.30em;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
     display: inline-block;
     background-color: rgb(255, 236, 60);
     width: 80px;
     height:45px;
-    margin-top: 22px;
+    margin-top: 23px;
     color: black;
     border: 1px solid rgb(0, 0, 0);
 }
 
 .cv:hover{
-    border: 2px solid white;
-    background-color: rgb(255, 236, 60);
-    color: black;
+    background-color: rgb(255, 203, 60);
     transition: 0.4s;
+    text-decoration: none;
+    color: black;
 }
 
 .contact{
@@ -257,11 +260,16 @@ ul > i{
     font-size: 1.3em;
 }
 
+.contactButton{
+    text-decoration: none !important;
+}
+
 .contact:hover{
     background-color: rgb(255, 0, 0);
-    transition: 0.4s;
-    border: 2px solid rgb(0, 0, 0);
+    transition: 0.2s;
+    border: 2px solid rgb(102, 161, 133);
 }
+
 
 /* 
 *---------------------------------------------------------------------------------------------------
@@ -489,6 +497,7 @@ ul > i{
     }
 
     footer{
+        padding: 40px 0;
         margin-top: 25px;
         height: 100px;
         width: 100%;
@@ -496,14 +505,9 @@ ul > i{
         color: #fff;
     }
 
-
+    
 @media screen and (max-width: 768px)
 {
-
-    body{
-        width: 100%;
-    }
-
     .heading-primary-main{
         font-size: 0.9em;
     }
@@ -525,7 +529,7 @@ ul > i{
     .main-nav{
         width: 100%;
         height: 100%;
-        left: -50rem;
+        left: -40rem;
         margin: auto;
     }
 
